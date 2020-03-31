@@ -1,0 +1,52 @@
+.toggles {
+    width: 100%;
+
+    padding: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle_button {
+    min-width: 44px;
+    max-width: 44px;
+    width: 100%;
+    min-height: 44px;
+    max-height: 44px;
+    height: 100%;
+
+    padding: 2px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all .5s ease;
+
+    opacity: 0.5;
+}
+.circle_button .icon {
+    font-size: 20px;
+
+    margin: 0px 0px 0px -3px;
+
+    color: #fff;
+
+    transition: all .5s ease;
+}
+/* :hover */
+.circle_button:hover {
+    opacity: 1;
+}
+
+/* if active */
+.toggles.toggles_active .circle_button .icon {
+    margin: 0px 0px 0px 3px;
+
+    transform: rotate(180deg);
+}

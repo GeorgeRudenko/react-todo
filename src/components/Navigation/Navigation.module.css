@@ -1,0 +1,215 @@
+/* Admin Sidebar */
+.admin_sidebar {
+    min-width: 220px;
+    max-width: 220px;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    height: 100%;
+
+    margin: 0px;
+    padding: 0px;
+
+    background-color: #4e73df;
+    background-image: linear-gradient(180deg,#4e73df 10%,#224abe 100%);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    overflow-y: scroll;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+
+    z-index: 1000;
+}
+.admin_sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.admin_sidebar::-webkit-scrollbar-track {
+    display: none;
+}
+.admin_sidebar::-webkit-scrollbar-thumb {
+    background: #ffffff;
+
+    border-radius: 5px;
+
+    cursor: pointer !important;
+}
+
+/* Base sidebar styles */
+hr.separator {
+    width: calc(100% - 32px);
+
+    margin: 0 auto 16px;
+
+    background: #ffffff;
+
+    opacity: 0.25;
+}
+
+.big_title {
+    font-size: 24px;
+    font-weight: 600;
+
+    margin: 0px;
+    padding: 0px 22px;
+
+    color: #fff;
+}
+
+.header_link {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header_link .icon {
+    font-size: 30px;
+
+    margin: 0px;
+
+    color: #fff;
+}
+/* Base sidebar styles end */
+
+.nav {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.nav_header {
+    width: 100%;
+
+    padding: 20px 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.nav_list {
+    width: 100%;
+
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.list_title {
+    font-size: 10px;
+    font-weight: 600;
+
+    line-height: 1;
+    text-transform: uppercase;
+
+    margin: 0px 0px 6px;
+    padding: 0px 16px;
+
+    color: #fff;
+
+    opacity: 0.5;
+}
+
+.list_link {
+    width: 100%;
+
+    margin: 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.link {
+    width: 100%;
+
+    padding: 16px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    opacity: 0.5;
+
+    transition: all .5s ease;
+}
+.link .icon {
+    width: 18px;
+
+    font-size: 14px;
+
+    margin-right: 8px;
+
+    color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0.5;
+
+    transition: all .5s ease;
+}
+.link span {
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #fff;
+}
+
+.link.active,
+.link:hover {
+    opacity: 1;
+}
+.link.active .icon,
+.link:hover .icon {
+    opacity: 1;
+}
+
+/* Admin Sidebar toggle */
+.admin_sidebar.toggle {
+    min-width: 100px;
+    max-width: 100px;
+}
+.admin_sidebar.toggle::-webkit-scrollbar {
+    display: none;
+}
+
+.admin_sidebar.toggle .big_title {
+    display: none;
+}
+
+.admin_sidebar.toggle .nav_list {
+    align-items: center;
+}
+
+.admin_sidebar.toggle .link {
+    flex-direction: column;
+}
+.admin_sidebar.toggle .link .icon {
+    margin: 0px;
+}
+.admin_sidebar.toggle .link span {
+    text-align: center;
+}
+/* Admin Sidebar toggle end */
+/* Admin Sidebar end */

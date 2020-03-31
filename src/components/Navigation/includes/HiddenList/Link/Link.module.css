@@ -1,0 +1,15 @@
+.list_link {
+    width: 100%;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    margin: 0px 0px 8px;
+
+    color: #000;
+
+    opacity: 1;
+}
+.list_link:last-child {
+    margin-bottom: 0px;
+}

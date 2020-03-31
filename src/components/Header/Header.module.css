@@ -1,0 +1,28 @@
+.header {
+    min-width: calc(100vw - 220px);
+    max-width: calc(100vw - 220px);
+    width: 100%;
+    min-height: 74px;
+    max-height: 74px;
+    height: 100%;
+
+    margin: 0px;
+    padding: 14px 30px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+}
+.header.toggle {
+    min-width: calc(100vw - 100px);
+    max-width: calc(100vw - 100px);
+}

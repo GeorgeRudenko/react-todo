@@ -1,0 +1,22 @@
+.main {
+    min-width: 100vw;
+    max-width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+
+    margin: 0px;
+    padding: 74px 0px 0px 220px;
+
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    position: relative;
+}
+.main.toggle {
+    padding-left: 100px;
+}
