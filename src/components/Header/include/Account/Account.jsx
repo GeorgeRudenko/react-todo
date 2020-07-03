@@ -1,15 +1,18 @@
 import React from "react";
-import styles from './Account.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCogs, faSignOutAlt, faUser } from '@fortawesome/free-solid-svg-icons'
+import { NavLink } from 'react-router-dom'
+
+import s from './Account.module.css';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCogs, faSignOutAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const HiddenMenu = (props) => {
     return (
         <div className={props.classes}>
-            <div className={styles.link}><FontAwesomeIcon icon={faUser} className={styles.icon} /> Profile</div>
-            <div className={styles.link}><FontAwesomeIcon icon={faCogs} className={styles.icon} /> Settings</div>
-            <i className={styles.separator}></i>
-            <div className={styles.link}><FontAwesomeIcon icon={faSignOutAlt} className={styles.icon} /> Logout</div>
+            <NavLink to="/profile" activeClassName={s.active} className={s.link}><FontAwesomeIcon icon={faUser} className={s.icon} /> Profile</NavLink>
+            <NavLink to="/settings" activeClassName={s.active} className={s.link}><FontAwesomeIcon icon={faCogs} className={s.icon} /> Settings</NavLink>
+            <i className={s.separator}></i>
+            <div className={s.link}><FontAwesomeIcon icon={faSignOutAlt} className={s.icon} /> Logout</div>
         </div>
     );
 }
@@ -35,12 +38,12 @@ class Account extends React.Component {
     
     render() {
         return (
-            <div className={styles.account}>
-                <div className={styles.control} onClick={this.showMenu}>
-                    <strong className={styles.name}>User name</strong>
-                    <i className={styles.avatar}></i>
+            <div className={s.account}>
+                <div className={s.control} onClick={this.showMenu}>
+                    <strong className={s.name}>User name</strong>
+                    <i className={s.avatar}></i>
                 </div>
-                <HiddenMenu classes={this.state.viewMenu ? `${styles.menu} ${styles.view}` : `${styles.menu}`} />
+                <HiddenMenu classes={this.state.viewMenu ? `${s.menu} ${s.view}` : `${s.menu}`} />
             </div>
         );
     }

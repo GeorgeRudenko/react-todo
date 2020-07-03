@@ -42,7 +42,7 @@ class HiddenList extends React.Component {
             })
             
             // The operation with - and + is needed to calculate the height of all links
-            // Link count * Link height - 1 Link (without margin-bottom, height 9) + 40 Link wrapper padding-top\bottom
+            // Link count * Link height - 1 Link (without margin-bottom, height 9) + 59 Link wrapper padding-top\bottom
             return (((counter - 1) * 27) + 59);
         }
     

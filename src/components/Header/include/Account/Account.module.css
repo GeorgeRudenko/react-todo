@@ -102,14 +102,14 @@
 .menu.view {
     display: flex;
 
-    animation: shoMenu .5s ease;
+    animation: showMenu .5s ease;
 
     transition: .5s all 0s ease;
 
     transform: scale(1);
     opacity: 1;
 }
-@keyframes shoMenu {
+@keyframes showMenu {
     0% {
         transform: scale(0.85);
         opacity: 0.25;
@@ -153,10 +153,12 @@
     transition: all .5s ease;
 }
 
-/* :hover*/
+/* :hover & .active */
+.link.active,
 .link:hover {
     background: #f6f6f6;
 }
+.link.active .icon,
 .link:hover .icon {
     color: #3c65df;
 }

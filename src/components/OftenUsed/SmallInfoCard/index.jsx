@@ -4,9 +4,9 @@ import s from "./styles.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 
-const Small_info_card = (props) => {
+const SmallInfoCard = (props) => {
     let valueWrapper = () => {
-        if (props.isPercent == true) {
+        if (props.isPercent === true) {
             let calcPercent = Number(props.value[1] / (props.value[0] / 100));
             
             return (
@@ -29,7 +29,7 @@ const Small_info_card = (props) => {
     
     if (props.value) {
         return (
-            <div className={`${s.info_card}`} style={{maxWidth: `${props.maxWidth}%`, borderLeftColor: `${props.color}`}}>
+            <div className={`${s.info_card}`} style={{borderLeftColor: `${props.color}`}}>
                 <div className={s.data}>
                     <small className={s.title} style={{color: `${props.color}`}}>{props.name}</small>
                     { valueWrapper() }
@@ -43,4 +43,4 @@ const Small_info_card = (props) => {
     }
 }
 
-export default Small_info_card;
+export default SmallInfoCard;

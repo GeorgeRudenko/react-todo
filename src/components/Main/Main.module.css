@@ -8,12 +8,14 @@
     margin: 0px;
     padding: 74px 0px 0px 220px;
 
-    background: #fff;
+    background: #f8f9fc;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    overflow-x: hidden;
 
     position: relative;
 }

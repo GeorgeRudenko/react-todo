@@ -6,7 +6,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 const Search = () => {
     return (
         <form className={styles.search}>
-            <input type="text" val={""} id="task_search" required />
+            <input type="text" val={""} id="task_search" placeholder={"Search for..."} required />
             <button type="button">
                 <FontAwesomeIcon icon={faSearch} />
             </button>
