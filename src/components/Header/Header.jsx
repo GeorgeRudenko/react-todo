@@ -1,9 +1,10 @@
 import React from "react";
-import styles from './Header.module.css';
+import s from './Header.module.css';
 
 // Include component
-import Account from "./include/Account/Account"
 import Search from "./include/Search/Search";
+import AlertCenter from "./include/AlertCenter/index";
+import Account from "./include/Account/Account";
 
 class Header extends React.Component {
     constructor(props) {
@@ -22,9 +23,12 @@ class Header extends React.Component {
     
     render() {
         return (
-            <div className={this.state.isToggle ? `${styles.header} ${styles.toggle}` : `${styles.header}`}>
+            <div className={this.state.isToggle ? `${s.header} ${s.toggle}` : `${s.header}`}>
                 {/* Search block */}
                 <Search />
+    
+                {/* User alerts center */}
+                <AlertCenter />
                 
                 {/* User account block */}
                 <Account />
@@ -33,4 +37,4 @@ class Header extends React.Component {
     }
 }
 
-export default  Header;
+export default Header;

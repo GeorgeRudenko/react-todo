@@ -11,6 +11,8 @@ import MyDay from './../Pages/MyDay/MyDay';
 import Important from './../Pages/Important/Important';
 import Planed from './../Pages/Planed/Planed';
 import Tasks from './../Pages/Tasks/Tasks';
+import Profile from './../Pages/Profile/Profile';
+import Settings from './../Pages/Settings/Settings';
 
 class Main extends React.Component {
     constructor(props) {
@@ -46,6 +48,12 @@ class Main extends React.Component {
                     )} />
                     <Route path="/tasks" render={() => (
                         <Tasks />
+                    )} />
+                    <Route path="/profile" render={() => (
+                        <Profile />
+                    )} />
+                    <Route path="/settings" render={() => (
+                        <Settings />
                     )} />
                 </Switch>
             </div>

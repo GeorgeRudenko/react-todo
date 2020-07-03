@@ -48,11 +48,181 @@ button {
 }
 /* 1.1 Base wrapper end */
 
-/* 1.3 Base small info modal */
-/* 1.3 Base small info modal end */
+/* 1.3 Base content block */
+.base_content_block {
+    width: 100%;
 
-/* 1.4 Base small info modal */
-/* 1.4 Base small info modal end */
+    border: 1px solid #eaeaea;
+
+    box-shadow: 0px 0px 15px 0px #eaeaea;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    position: relative;
+}
+.base_content_block .header {
+    width: 100%;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    line-height: 1;
+    text-align: left;
+
+    padding: 16px 20px;
+
+    color: #4e73df;
+    background: #f8f9fc;
+
+    border-bottom: 1px solid #e3e6f0;
+    border-radius: 6px 6px 0px 0px;
+}
+.base_content_block .content {
+    width: 100%;
+
+    padding: 16px 20px;
+
+    background: #ffffff;
+
+    border-radius: 0px 0px 6px 6px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+/* 1.3 Base content block end */
+
+/* 1.4 Base small control modal */
+.base_small_modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    position: relative;
+}
+.base_small_modal .control_button {
+    min-width: 24px;
+    max-width: 24px;
+    width: 100%;
+    min-height: 24px;
+    max-height: 24px;
+    height: 100%;
+
+    padding: 2px;
+
+    background: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all .5s ease;
+}
+.base_small_modal .control_button .icon {
+    font-size: 18px;
+
+    color: #3c65df;
+}
+/* :hover */
+.base_small_modal .control_button:hover {
+    transform: rotate(180deg);
+}
+/* content */
+.base_small_modal .modal_content {
+    min-width: 140px;
+    max-width: 140px;
+    width: 100%;
+
+    padding: 6px 0px 8px;
+
+    background: #fff;
+
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    transform: scale(0.85);
+    opacity: 0.25;
+
+    position: absolute;
+    top: 32px;
+    right: 0px;
+    z-index: 1;
+}
+/* .view */
+.base_small_modal .modal_content.view {
+    display: flex;
+
+    animation: showMenu .5s ease;
+
+    transition: .5s all 0s ease;
+
+    transform: scale(1);
+    opacity: 1;
+}
+@keyframes showMenu {
+    0% {
+        transform: scale(0.85);
+        opacity: 0.25;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.base_small_modal .modal_content .title {
+    width: 100%;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: left;
+
+    margin: 0px 0px 4px 0px;
+    padding: 4px 20px;
+
+    color: #b7b9cc;
+}
+.base_small_modal .modal_content .btn {
+    width: 100%;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1;
+    text-align: left;
+
+    padding: 6px 20px;
+
+    color: #2e2f37;
+    background: #ffffff;
+
+    transition: all .5s ease;
+}
+/* :hover */
+.base_small_modal .modal_content .btn:hover {
+    background: #f8f9fc;
+}
+/* :active */
+.base_small_modal .modal_content .btn:active {
+    color: #fff;
+    background: #4e73df;
+}
+/* 1.4 Base small control modal end */
 
 /* 1.5 Base small info modal */
 /* 1.5 Base small info modal end */

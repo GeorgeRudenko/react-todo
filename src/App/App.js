@@ -26,7 +26,10 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <Navigation toggleStatus={this.state.menuIsToggle} updateToggle={this.SwitchToggleStatus} />
+                <Navigation taskGroups={this.props.store.getState().taskGroups}
+                            groupLists={this.props.store.getState().groupLists}
+                            toggleStatus={this.state.menuIsToggle}
+                            updateToggle={this.SwitchToggleStatus} />
                 <Main toggleStatus={this.state.menuIsToggle} />
             </div>
         );

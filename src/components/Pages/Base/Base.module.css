@@ -1,8 +1,19 @@
 .main_statistics {
     width: 100%;
 
+    margin: 0px 0px 20px 0px;
+
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-content: stretch;
 }
+
+/* Auth user last seven days statistics */
+.main_last_days_statistics {
+    width: 100%;
+
+    margin: 0px 0px 20px 0px;
+}
+/* Auth user last seven days statistics end */
