@@ -45,6 +45,16 @@
 }
 
 /* if active */
+.toggles.toggles_active {
+    width: 100px;
+    height: 76px;
+
+    background: #2850c3;
+
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
 .toggles.toggles_active .circle_button .icon {
     margin: 0px 0px 0px 3px;
 

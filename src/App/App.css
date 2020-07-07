@@ -17,6 +17,10 @@ button {
     outline: none;
     text-decoration: none;
 }
+
+body {
+    overflow-x: hidden;
+}
 /* 0. Styles reset */
 
 /* 1. Base styles */
@@ -30,6 +34,8 @@ button {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
+    overflow-x: hidden;
 }
 /* 1.0 App styles end */
 

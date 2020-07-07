@@ -9,7 +9,6 @@ import { faHome, faSmileWink, faSun, faStar, faCalendar, faTasks } from '@fortaw
 // Import includes components
 import ToggleButton from "./includes/ToggleButton/ToggleButton";
 import HiddenList from "./includes/HiddenList/HiddenList";
-import styles from "./includes/ToggleButton/ToggleButton.module.css";
 
 class Navigation extends React.Component {
     constructor(props) {
@@ -63,13 +62,13 @@ class Navigation extends React.Component {
                 ],
             },
         ];
-        
+
         const HiddenListCollection = (target) => {
             return target.map((elem, index) =>
                 <HiddenList key={index.toString()} name={elem.name} linkList={elem.list} smallStatus={this.state.isToggle} />
             )
         }
-        
+
         return (
             <div className={this.state.isToggle ? `${s.admin_sidebar} ${s.toggle}` : `${s.admin_sidebar}`}>
                 <nav className={s.nav}>
@@ -80,9 +79,9 @@ class Navigation extends React.Component {
                             <h3 className={s.big_title}>To Do</h3>
                         </NavLink>
                     </div>
-                
+
                     <hr className={s.separator} />
-        
+
                     <ul className={s.nav_list}>
                         <h5 className={s.list_title}>Navigations</h5>
                         
@@ -126,16 +125,16 @@ class Navigation extends React.Component {
                             </NavLink>
                         </li>
                     </ul>
-        
+
                     <hr className={s.separator} />
-        
+
                     <ul className={s.nav_list}>
                         <h5 className={s.list_title}>Task lists</h5>
                         { HiddenListCollection(MenuTaskGroups) }
                     </ul>
-        
+
                     <hr className={s.separator} />
-                    
+
                     <ToggleButton isActive={this.state.isToggle} onClickEvent={this.props.updateToggle} />
                 </nav>
             </div>

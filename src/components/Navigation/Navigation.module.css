@@ -190,6 +190,9 @@ hr.separator {
     min-width: 100px;
     max-width: 100px;
 }
+.admin_sidebar.toggle .nav {
+    padding-bottom: 76px;
+}
 .admin_sidebar.toggle::-webkit-scrollbar {
     display: none;
 }

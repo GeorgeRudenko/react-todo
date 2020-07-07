@@ -7,7 +7,7 @@ import './index.css';
 import App from './App/App';
 
 import { createStore } from 'redux';
-import { rootReducer } from './redux/reducer';
+import { rootReducer } from './redux/rootReducer';
 
 import * as serviceWorker from './serviceWorker';
 
