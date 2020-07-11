@@ -1,0 +1,243 @@
+/* Control wrapper */
+.control_panel {
+    max-width: 1680px;
+    width: calc(100vw - 260px);
+
+    margin: 0px 0px 20px 0px;
+    padding: 0px 20px 0px 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control_panel .month_display {
+    margin: 0px 20px 0px 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.control_panel .month_display .btn {
+    background: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+.control_panel .month_display .btn .span {
+    min-width: 100px;
+    max-width: 100px;
+    width: auto;
+    height: 40px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-align: center;
+    line-height: 1;
+
+    margin: 0px;
+    padding: 10px;
+
+    color: #4e73df;
+    background: transparent;
+
+    border: 2px solid #4e73df;
+
+    transition: all .5s ease;
+
+    z-index: 2;
+}
+.control_panel .month_display .btn .span.week {
+    border-right: none;
+    border-radius: 50px 0px 0px 50px;
+}
+.control_panel .month_display .btn .span.month {
+    border-left: none;
+    border-radius: 0px 50px 50px 0px;
+}
+/* :after */
+.control_panel .month_display .btn::after {
+    content: '';
+
+    max-width: 100px;
+    min-width: 100px;
+    width: 100%;
+    height: 100%;
+
+    background: #4e73df;
+
+    border-radius: 50px;
+
+    transition: all .5s ease;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+/* .active */
+.control_panel .month_display .btn.month .month,
+.control_panel .month_display .btn.week .week {
+    color: #fff;
+}
+.control_panel .month_display .btn.month::after {
+    left: 100px;
+}
+
+/* Current date */
+.control_panel .current_date {
+    margin: 0px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.control_panel .current_date .month_name {
+    font-size: 18px;
+    font-weight: 600;
+
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+
+    color: #242424;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.control_panel .current_date .date {
+    margin: 4px 0px 4px 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.control_panel .current_date .date .go_actual,
+.control_panel .current_date .date .btn {
+    height: 24px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    text-align: center;
+    line-height: 1;
+
+    margin: 0px 8px;
+    padding: 5px 7px;
+
+    color: #fff;
+    background: #202020;
+
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.control_panel .current_date .date .btn {
+    margin: 0px 2px;
+
+    color: #202020;
+    background: transparent;
+}
+.control_panel .current_date .year {
+    font-size: 14px;
+    font-weight: 600;
+
+    text-align: center;
+    line-height: 1;
+
+    color: #a0a0a0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Additional control */
+.control_panel .additional_control {
+    margin: 0px 0px 0px 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.control_panel .additional_control .btn {
+    min-width: 120px;
+    width: auto;
+    height: 40px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-align: center;
+    line-height: 1;
+
+    margin: 0px 0px 0px 20px;
+    padding: 10px;
+
+    color: #fff;
+    background: #4e73df;
+
+    border: 2px solid #4e73df;
+    border-radius: 50px;
+}
+.control_panel .additional_control .btn.weekends_btn {
+    min-width: 120px;
+    max-width: 120px;
+
+    color: #a0a0a0;
+    background: transparent;
+
+    border-color: #a0a0a0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    transition: all .5s ease;
+
+    position: relative;
+    z-index: 2;
+}
+.control_panel .additional_control .btn.weekends_btn::after {
+    content: '';
+
+    width: 10px;
+    height: 10px;
+
+    background: transparent;
+
+    border-radius: 50px;
+
+    transition: all .5s ease;
+    transform: rotate(90deg);
+
+    position: absolute;
+    z-index: -1;
+}
+/* .active */
+.control_panel .additional_control .btn.weekends_btn.active {
+    color: #fff;
+
+    border-color: #4e73df;
+}
+.control_panel .additional_control .btn.weekends_btn.active::after {
+    width: 120px;
+    height: 120px;
+
+    background: #4e73df;
+}

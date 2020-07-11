@@ -8,14 +8,14 @@ import Navigation from "../components/Navigation/Navigation";
 class App extends React.Component {
     constructor(props) {
         super(props);
-        
+
         this.state = {
             menuIsToggle: false
         };
-        
+
         this.SwitchToggleStatus = this.SwitchToggleStatus.bind(this);
     }
-    
+
     // Switch toggle status
     SwitchToggleStatus() {
         this.setState((state) => ({

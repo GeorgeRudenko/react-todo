@@ -9,172 +9,12 @@
     align-content: flex-start;
 }
 
-/* Control wrapper */
-.control_panel {
-    width: 100%;
-
-    margin: 0px 0px 20px 0px;
-    padding: 0px 20px 0px 0px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.control_panel .month_display {
-    margin: 0px 20px 0px 0px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.control_panel .month_display .btn {
-    min-width: 100px;
-    width: auto;
-    height: 40px;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    text-align: center;
-    line-height: 1;
-
-    margin: 0px;
-    padding: 10px;
-
-    color: #4e73df;
-    background: transparent;
-
-    border: 2px solid #4e73df;
-}
-.control_panel .month_display .btn.week {
-    border-radius: 50px 0px 0px 50px;
-}
-.control_panel .month_display .btn.month {
-    border-radius: 0px 50px 50px 0px;
-}
-/* .active */
-.control_panel .month_display .btn.active {
-    color: #fff;
-    background: #4e73df;
-}
-
-/* Current date */
-.control_panel .current_date {
-    margin: 0px 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-.control_panel .current_date .month {
-    margin: 0px 0px 4px 0px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.control_panel .current_date .month .btn {
-    width: 24px;
-    height: 24px;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    text-align: center;
-    line-height: 1;
-
-    margin: 0px 10px;
-
-    color: #202020;
-    background: transparent;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.control_panel .current_date .month .name {
-    height: 24px;
-
-    font-size: 20px;
-    font-weight: 700;
-
-    text-align: center;
-    line-height: 1;
-
-    color: #202020;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.control_panel .current_date .year {
-    font-size: 14px;
-    font-weight: 600;
-
-    text-align: center;
-    line-height: 1;
-
-    color: #a0a0a0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Additional control */
-.control_panel .additional_control {
-    margin: 0px 0px 0px 20px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
-.control_panel .additional_control .btn {
-    min-width: 120px;
-    width: auto;
-    height: 40px;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    text-align: center;
-    line-height: 1;
-
-    margin: 0px 0px 0px 20px;
-    padding: 10px;
-
-    color: #fff;
-    background: #4e73df;
-
-    border: 2px solid #4e73df;
-    border-radius: 50px;
-}
-.control_panel .additional_control .btn.weekends_btn {
-    min-width: 120px;
-
-    color: #a0a0a0;
-    background: transparent;
-
-    border-color: #a0a0a0;
-}
-.control_panel .additional_control .btn.weekends_btn.active {
-    color: #fff;
-    background: #4e73df;
-
-    border-color: #4e73df;
-}
-
 /* Calendar wrapper */
 .calendar {
     max-width: 1680px;
     width: calc(100vw - 280px);
 
+    border: 1px solid #eaeaea;
     border-radius: 10px;
 
     display: flex;
@@ -208,15 +48,15 @@
     color: #787878;
     background: #ffffff;
 
-    border: 1px solid #eaeaea;
-    border-right: none;
+    border-bottom: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .calendar .name_of_days .name:last-child {
-    border-right: 1px solid #eaeaea;
+    border-right: none;
 }
 
 .calendar .number_of_days {
@@ -244,17 +84,42 @@
     background: #ffffff;
 
     border-bottom: 1px solid #eaeaea;
-    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
 
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
 }
 .calendar .number_of_days .block:nth-child(7n) {
-    border-right: 1px solid #eaeaea;
+    border-right: none;
 }
 .calendar .number_of_days .block.another_month {
     color: rgba(120, 120, 120, 0.5);
+}
+.calendar .number_of_days .block .num {
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid transparent;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calendar .number_of_days .block.current_date .num {
+    padding: 10px;
+
+    color: #4e73df;
+
+    border: 1px solid #4e73df;
+    border-radius: 50%;
+}
+/* If week displayed */
+.calendar .number_of_days .block.week_day {
+    min-height: 600px;
+
+    border-bottom: none;
 }
 
 /* If weekends not displayed */
